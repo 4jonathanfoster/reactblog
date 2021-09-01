@@ -1,0 +1,27 @@
+.header2{
+    margin-top: 60px;
+}
+
+.header2Titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'STIX Two Math', serif;
+    color: #444;
+}
+.header2TitlesSm{
+    position: absolute;
+    top: 15%;
+    font-size: 20px;
+}
+.header2TitlesLg{
+    position: absolute;
+    top: 20%;
+    font-size: 100px;
+}
+.header2Img{
+    width: 100%;
+    height: 450px;
+    margin-top: 80px;
+    object-fit: cover;
+}

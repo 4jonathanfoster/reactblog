@@ -1,0 +1,51 @@
+.head{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(14, 233, 236);
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Lora', serif;
+}
+.headCenter{
+    flex: 6;
+}
+.headLeft,.headRight{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headIcon{
+    font-size: 20px;
+    margin-right:10px;
+    color:blue;
+    cursor: pointer;
+}
+.headImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+ }
+
+.headList{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.headListItem{
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.headSearchIcon{
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    margin-left: 15px;
+}
