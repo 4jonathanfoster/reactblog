@@ -15,6 +15,9 @@ export default function Post() {
          <hr/>
          <span className="postDate">1 hour ago</span>
          </div>
+         <p className="postDesc">
+         The public cloud is a very powerful way not only to leverage size but also to unleash the innovation — the ability to scale up and scale down in that developer space very quickly
+         </p>
         </div>
 
     )
