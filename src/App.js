@@ -5,10 +5,10 @@ import Write from "../src/pages/write/Write"
 function App() {
   return (
     <>
-    
+   
     <Topbar/>
     <Write/>
-
+    
     </>
     
   );

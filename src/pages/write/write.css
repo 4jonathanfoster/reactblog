@@ -1,6 +1,7 @@
 .write{
     padding-top: 50px;
 }
+
 .writeForm{
 position: relative;
 
@@ -9,11 +10,14 @@ position: relative;
     margin-left: 150px;
    
 }
+
 .writeIcon{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    border: 1px solid;
+
+    border:1px solid;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,6 +25,7 @@ position: relative;
     color:cadetblue;
     cursor: pointer;
 }
+
 .writeInput{
     font-size: 30px;
     border: none;
@@ -28,21 +33,27 @@ position: relative;
     width: 70vw;
 
 }
-.wirteInput:focus{
+
+.writeInput:focus {
     outline: none;
 }
+
 .writeText{
     font-size: 20px;
+    height: 100vh;
 }
+
 .writeSubmit{
-position: absolute;
-top: 20px;
-right: 50px;
-color: cornsilk;
-background-color: rgb(35, 147, 147);
-padding: 10px;
-border: none;
-border-radius: 10px;
-cursor: pointer;
-font-size: 16px;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
 }
+
+
