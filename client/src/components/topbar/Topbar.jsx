@@ -1,6 +1,10 @@
 import "./topbar.css"
+import React, { useState } from "react";
+import {Link} from 'react-router-dom';
 
 export default function Topbar() {
+    const [loggin, setDone] = useState(false);
+
     return (
         <div className="topbar">
               <div className="topbarLeft">
@@ -9,20 +13,16 @@ export default function Topbar() {
                   <li className="topbarListItem">ABOUT</li>
                   <li className="topbarListItem">CONTACT</li>
                   <li className="topbarListItem">WRITE</li>
-                  <li className="topbarListItem">LOGOUT</li>
+                  {!loggin ? (
+                    <li className="headListItem"> <Link className="waves-effect waves-light btn modal-trigger" to = "/signup">SignUp</Link>
+                    </li>
+                  ) : (
+                    <li className=" headListItem">LOGOUT</li>
+                  )}
               </ul>
            </div>
-           <div className="topbarCenter">
-            
-             
+           <div className="topbarCenter">   
            </div>
-           
-           {/* <div className="topbarLeft">
-            <i className="topbarIcon fab fa-facebook-square"></i>
-            <i className="topbarIcon fab fa-linkedin"></i>
-            <i className="topbarIcon fab fa-twitter-square"></i>
-            <i className="topbarIcon fab fa-github-square"></i>
-           </div> */}
          
            <div className="topbarRight"></div>
            <img

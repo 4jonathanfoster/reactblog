@@ -1,4 +1,4 @@
-import "./Logout.css";
+import "./logout.css";
 
 export default function Logout() {
     return (
