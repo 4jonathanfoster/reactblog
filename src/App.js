@@ -6,8 +6,15 @@ import Logout from "./components/logout/Logout.jsx"
 function App() {
   return (
     <>
+<<<<<<< HEAD
     <Topbar/>
     <Logout/>
+=======
+    
+    <Topbar />
+    <Write />
+    <Single/>
+>>>>>>> main
 
     </>
     
