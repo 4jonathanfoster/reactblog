@@ -39,5 +39,12 @@
 .postDesc{
     font-family: 'Besley', serif;
     font-size: 14px;
-
+    color: cadetblue;
+    line-height: 24px;
+    margin-top: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
