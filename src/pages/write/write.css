@@ -2,8 +2,16 @@
     padding-top: 50px;
 }
 
-.writeForm{
+.writeImg{
+    margin-left: 150px;
+    width: 70vw;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
 
+.writeForm{
+    position: relative;
 }
 
 .writeFormGroup{
@@ -24,3 +32,33 @@
     color: rgb(121, 115, 115);
     cursor: pointer;
 }
+
+.writeInput{
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+}
+
+.writeInput:focus {
+    outline: none;
+}
+
+.writeText{
+    font-size: 20px;
+    height: 100vh;
+}
+
+.writeSubmit{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
