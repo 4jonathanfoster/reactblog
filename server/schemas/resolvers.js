@@ -31,6 +31,7 @@ const resolvers = {
       //Auth 
       const token = signToken(user);
 
+      console.log(token);
       return { token, user };
     },
     async addUser(parent , { username, email, password }) {
@@ -39,6 +40,8 @@ const resolvers = {
 
       const user = await User.create({ username, email, password });
       const token = signToken(user);
+      console.log(token);
+
       return { token, user };
     },
   }
