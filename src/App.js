@@ -2,8 +2,8 @@ import Home from "../src/pages/home/Home";
 import Topbar from "../src/components/topbar/Topbar";
 import Single from "../src/pages/single/Single";
 import Login from "../src/components/login/Login";
-import Logout from "./components/logout/Logout";
-import Write from "../src/pages/write/Write";
+import Logout from "./components/logout/logout";
+import Write from "../src/pages/write/write";
 import {
   BrowserRouter as Router,
   Switch,
