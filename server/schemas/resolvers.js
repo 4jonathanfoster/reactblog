@@ -41,6 +41,27 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+      async savePost(parent, { newPost }, context) {
+
+      console.log("resolve saveBook");
+
+      if (context.user) {
+        //Tries to find the user and append the book to the array
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $push: { savedPosts: newPost } },
+          { 
+            new: true,
+            runValidators: true 
+          }
+        );
+        //Returns the updated user
+        return updatedUser;
+      } 
+      else {
+        throw new AuthenticationError('SaveBook Error');
+      }
+    },
   }
 };
 

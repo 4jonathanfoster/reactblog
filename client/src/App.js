@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from "../src/pages/home/Home";
 import Topbar from "../src/components/topbar/Topbar";
-import Login from "../src/components/login/login";
-import Signup from "../src/components/signup/signup";
 import Single from "../src/pages/single/Single";
-import Logout from "./components/logout/logout.jsx"
+import Login from "../src/components/login/login";
+import Logout from "./components/logout/logout"
 import Write from "../src/pages/write/write"
-import "materialize-css/dist/css/materialize.min.css";
+import Signup from "../src/components/signup/signup"
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -44,26 +44,43 @@ const client = new ApolloClient({
 
 
 function App() {
+  // const user = false;
+  const [loggedin, setLoggedin] = useState(false);
+  useEffect (() => {
+    let isLog = Auth.loggedIn();
+    setLoggedin(isLog);
+  },[]) 
   return (
-  <ApolloProvider client={client}>
-    <Router>
-      <Topbar/>
-      {!Auth.loggedIn() ? (   
-      <Switch>
-        <Route exact path = "/Signup" component = {Signup}/>
-      </Switch>
-      ) : 
-      (
-      <Switch>
-        <Route exact path = "/login" component = {Login}/>
-      </Switch>
-      )}
+    <ApolloProvider client={client}>
+          <Router>
+            <Topbar status = {loggedin} />
+          <Switch>
+            <Route exact path="/">
+          <Home/>
+            </Route>
+            <Route path="/logout">
+            <Logout/>
+            </Route>
+            <Route path="/login">
+            <Login/>
+            </Route>
+            <Route path="/write">
+            <Write/>
+            </Route>
+            <Route path="/single">
+            <Single/>
+            </Route>
+            <Route path="/signup">
+            <Signup />
+            </Route>
 
+          
+          </Switch>
+          </Router>
+    </ApolloProvider>
 
-    </Router>
-  </ApolloProvider>
-    
   );
 }
 
 export default App;
+

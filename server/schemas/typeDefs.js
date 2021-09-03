@@ -6,12 +6,17 @@ gql`
     _id: ID!
     username: String
     email: String
-    savedPosts: [Post]
+    savedPosts: [Post]!
   }
 
   type Post {
     _id: ID!
     comments: [String]
+    description: String
+    title: String
+  }
+
+  input PostInput {
     description: String
     title: String
   }
@@ -28,6 +33,8 @@ gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
+    savePost(newPost : PostInput!): User
+
   }
 `;
 

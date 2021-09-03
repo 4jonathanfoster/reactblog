@@ -2,6 +2,7 @@ import "../post/post.css"
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../utils/mutations';
+import Auth from '../../utils/auth';
 
 export default function Signup() {
     const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
@@ -22,6 +23,7 @@ export default function Signup() {
         const { data } = await adduser({
           variables: { ...userFormData },
         });
+        Auth.login(data.addUser.token);
       } 
       catch (err) {
         console.error(err);

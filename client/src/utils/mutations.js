@@ -24,3 +24,16 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const SAVE_USER_POST = gql`
+  mutation savePost($newPost : PostInput!) {
+    savePost(newPost : $newPost) {
+      _id
+      username
+      savedPosts{
+        description
+        title
+      }
+    }
+  }
+`;
