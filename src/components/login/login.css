@@ -1,27 +1,38 @@
 
 .loginStyle{
     height: 900px;
-    background: url("../../images/login_page_smaller.jpg");
+    background: url("../../images/logoutimage_800x600.jpg");
+    display: flex;
+    flex-direction: column;
 background-size:cover;
+align-items: center;
 }
 
 
 
 
 #flexmain{
-    background-color: rgb(236, 235, 236);
-    margin-left: 3rem;
-    margin-bottom: 3rem;
-    padding: 3rem 1rem 3rem 1rem;
-    border: 1px solid grey;
-    border-radius: 3px;
-    text-align:center;
+    box-shadow: 10px 12px 75px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 12px 75px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 12px 75px 0px rgba(0,0,0,0.75);
+        border-radius: 10px;
+        border: 2px solid #a3c1dd;
+    background: rgba(236,235,236,1);
+    height: 300px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 .signTitle {
-    color: #293740;
+    text-shadow: 0px 4px 10px rgba(0,0,0,0.6);
+    color: #000000;
     margin-top:3rem;
     margin-bottom: 3rem;
     text-align: center;
+    font-family: Lora;
+    font-size: 45px;
 }
 
 .col-auto {
@@ -30,13 +41,16 @@ background-size:cover;
     margin-bottom: 1rem;
 }
 #login-btn {
-    background-color: rgb(50, 50, 255);
-    color: white;
-    border: 1px solid black;
-    padding:3px;
+    margin-top: 7px;
+    width: 80px;
+    height: 30px;
+    background-color:#e3cad5 ;
+    border-radius: 20px;
+    font-family: "Besley";
+    text-shadow: 0px 0px 11px rgba(0,0,0,0.5);
 }
 .flex-container {
-    margin-top: 7rem;
+    margin-top: 250px;
     display:flex;
-    display: inline-flex;
+    flex-direction: column;
 }
