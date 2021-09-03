@@ -10,8 +10,14 @@ background-size:cover;
 }
 
 .logoutSquare {
-height: 200px;
-width: 600px;
+    box-shadow: 10px 12px 75px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 12px 75px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 12px 75px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    border: 10px solid #a3c1dd;
+background: rgba(214,220,233,0.90);
+height: 300px;
+width: 650px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -21,19 +27,25 @@ align-items: center;
     font-size: 300%;
     justify-content: center;
     text-align: center;
+    font-family: "Lora";
+    text-shadow: 0px 4px 10px rgba(0,0,0,0.6);
 }
 
 .logMessage{
     font-size:larger;
     text-align: center;
     margin-top: 30px;
+    font-family: "Besley";
+    text-shadow: 0px 0px 11px rgba(0,0,0,0.5);
 }
 .loginButton {
     margin-top: 30px;
-    width: 100px;
+    width: 150px;
     height: 40px;
     background-color:#a3c1dd ;
-    border-radius: 10px;
+    border-radius: 20px;
+    font-family: "Besley";
+    text-shadow: 0px 0px 11px rgba(0,0,0,0.5);
 
 
 }

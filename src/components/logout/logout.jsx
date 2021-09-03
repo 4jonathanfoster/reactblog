@@ -1,6 +1,6 @@
-import "./Logout.css";
+import "./logout.css";
 
-export default function Logout() {
+export default function logout() {
     return (
         <div className="logOut">
             <div className="logoutSquare">
