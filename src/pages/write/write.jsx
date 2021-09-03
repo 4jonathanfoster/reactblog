@@ -4,7 +4,7 @@ export default function Write() {
     return (
         <div className="write">
             <img className="writeImg"
-            src="" alt="" />
+            src="https://wallpapercave.com/wp/wp4020516.png" alt="" />
             <form className="writeForm">
                 <div className="writeFormGroup">
                     <label htmlFor="fileInput"></label>
