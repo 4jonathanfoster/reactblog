@@ -17,15 +17,18 @@ export default function Topbar() {
                   <li className="topbarListItem">
                   <Link className="topBarLinks" to="/">HOME</Link>
                   </li>
-                  <li className="topbarListItem">
+                  {/* <li className="topbarListItem">
                     <Link className="topBarLinks" to="/about">ABOUT</Link>
                     </li>
                   <li className="topbarListItem">
                   <Link className="topBarLinks" to="/contact">CONTACT</Link>
-                  </li>
+                  </li> */}
                   <li className="topbarListItem">
-                    <Link className="topBarLinks" to="/write">WRITE</Link>
+                    <Link className="topBarLinks" to="/write">CREATE POST</Link>
                     </li>
+                    <li className="topbarListItem">
+                  <Link className="topBarLinks"to="/login">LOGIN</Link>
+                  </li>
                   <li className="topbarListItem">
                   <Link className="topBarLinks"to="/logout">LOGOUT</Link>
                   </li>
