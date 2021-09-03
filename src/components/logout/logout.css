@@ -16,7 +16,7 @@ background-size:cover;
     border-radius: 10px;
     border: 3px solid #a3c1dd;
 background: rgba(236,235,236,1);
-height: 300px;
+height: 280px;
 width: 650px;
 display: flex;
 flex-direction: column;
@@ -40,9 +40,9 @@ text-align: center;
     text-shadow: 0px 0px 11px rgba(0,0,0,0.5);
 }
 .loginButton {
-    margin-top: 50px;
-    width: 150px;
-    height: 40px;
+    margin-top: 75px;
+    width: 125px;
+    height: 30px;
     background-color:#a3c1dd ;
     border-radius: 20px;
     font-family: "Besley";
