@@ -1,14 +1,10 @@
 import Home from "../src/pages/home/Home";
 import Topbar from "../src/components/topbar/Topbar";
 import Single from "../src/pages/single/Single";
+import Login from "../src/components/login/Login";
 import Logout from "./components/logout/logout"
 import Write from "../src/pages/write/write"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import Settings from "./pages/settings/settings";
 
 
@@ -23,6 +19,9 @@ function App() {
       </Route>
       <Route path="/logout">
       <Logout/>
+      </Route>
+      <Route path="/login">
+      <Login/>
       </Route>
       <Route path="/write">
       <Write/>
