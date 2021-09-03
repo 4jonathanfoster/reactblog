@@ -28,7 +28,15 @@ export default function Topbar() {
            <img
            className="topbarImg"
            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ0l7rJPUJqE_6sdra0fkLahBUxq2h2bqj3g&usqp=CAU" alt="" />
-           <i className="topbarSearchIcon fas fa-search"></i>
+           <i className="topbarSearchIcon fas fa-search" ></i>
+           
+           <div>
+           <form className="searchInput">
+  <label>
+    <input className="inputTextArea" type="text" name="Search" />
+  </label>
+</form>
+           </div>
            
         </div>
     )

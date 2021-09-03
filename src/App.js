@@ -1,8 +1,8 @@
-// import Home from "../src/pages/home/Home";
+import Home from "../src/pages/home/Home";
 import Topbar from "../src/components/topbar/Topbar";
-// import Single from "../src/pages/single/Single";
+import Single from "../src/pages/single/Single";
 import Logout from "./components/logout/logout"
-// import Write from "../src/pages/write/Write"
+import Write from "../src/pages/write/write"
 
 
 function App() {
@@ -10,12 +10,12 @@ function App() {
     <>
 
     <Topbar />
-    {/* <Write />
-    <Single/> */}
+    <Home/>
     <Logout/>
-
-    </>
+    <Write />
+    <Single/>
     
+    </>
   );
 }
 

@@ -37,6 +37,8 @@
     font-size: 18px;
     font-weight: 300;
     cursor: pointer;
+    font-family: Lora;
+    font-weight: bold;
 }
 
 .topbarImg{
@@ -51,5 +53,15 @@
     color: #000;
     cursor: pointer;
     margin-left: 10px;
-    margin-right: 250px;
+    margin-right: 25px;
 }
+
+.searchInput {
+    margin-right: 30px;
+}
+
+.inputTextArea {
+    outline: none;
+    border: none;
+}
+
