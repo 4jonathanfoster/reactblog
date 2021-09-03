@@ -1,17 +1,37 @@
 import "./topbar.css"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
 
 export default function Topbar() {
     return (
         <div className="topbar">
               <div className="topbarLeft">
+
               <ul className="topbarList">
-                  <li className="topbarListItem">HOME</li>
-                  <li className="topbarListItem">ABOUT</li>
-                  <li className="topbarListItem">CONTACT</li>
-                  <li className="topbarListItem">WRITE</li>
-                  <li className="topbarListItem">LOGOUT</li>
+
+                  <li className="topbarListItem">
+                  <Link className="topBarLinks" to="/">HOME</Link>
+                  </li>
+                  <li className="topbarListItem">
+                    <Link className="topBarLinks" to="/about">ABOUT</Link>
+                    </li>
+                  <li className="topbarListItem">
+                  <Link className="topBarLinks" to="/contact">CONTACT</Link>
+                  </li>
+                  <li className="topbarListItem">
+                    <Link className="topBarLinks" to="/write">WRITE</Link>
+                    </li>
+                  <li className="topbarListItem">
+                  <Link className="topBarLinks"to="/logout">LOGOUT</Link>
+                  </li>
               </ul>
            </div>
+           
            <div className="topbarCenter">
             
              

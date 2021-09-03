@@ -3,19 +3,39 @@ import Topbar from "../src/components/topbar/Topbar";
 import Single from "../src/pages/single/Single";
 import Logout from "./components/logout/logout"
 import Write from "../src/pages/write/write"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Settings from "./pages/settings/settings";
 
 
 function App() {
+  // const user = false;
   return (
-    <>
-
-    <Topbar />
+    <Router>
+      <Topbar />
+    <Switch>
+      <Route exact path="/">
     <Home/>
-    <Logout/>
-    <Write />
-    <Single/>
+      </Route>
+      <Route path="/logout">
+      <Logout/>
+      </Route>
+      <Route path="/write">
+      <Write/>
+      </Route>
+      <Route path="/single">
+      <Single/>
+      </Route>
+      <Route path="/settings">
+      <Settings/>
+      </Route>
     
-    </>
+    </Switch>
+    </Router>
   );
 }
 
