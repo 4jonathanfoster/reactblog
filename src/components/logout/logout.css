@@ -14,7 +14,7 @@ background-size:cover;
 -webkit-box-shadow: 10px 12px 75px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 12px 75px 0px rgba(0,0,0,0.75);
     border-radius: 10px;
-    border: 3px solid #a3c1dd;
+    border: 2px solid #a3c1dd;
 background: rgba(236,235,236,1);
 height: 280px;
 width: 650px;
@@ -25,7 +25,8 @@ text-align: center;
 }
 
 .logoutTitle{
-    font-size: 300%;
+    margin-top: 30px;
+    font-size: 250%;
     justify-content: center;
     text-align: center;
     font-family: "Lora";
@@ -40,7 +41,7 @@ text-align: center;
     text-shadow: 0px 0px 11px rgba(0,0,0,0.5);
 }
 .loginButton {
-    margin-top: 75px;
+    margin-top: 40px;
     width: 125px;
     height: 30px;
     background-color:#a3c1dd ;
