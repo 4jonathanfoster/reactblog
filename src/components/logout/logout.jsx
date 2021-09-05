@@ -7,7 +7,9 @@ export default function Logout() {
 
            <h1 className="logoutTitle">You have been Logged Out</h1>
           <p className="logMessage">Thanks for using TechBlog!</p>
+          <a href="/login">
           <button className="loginButton">Login Again!</button>
+          </a>
           </div>
         </div>
   
