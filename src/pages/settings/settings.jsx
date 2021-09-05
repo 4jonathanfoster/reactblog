@@ -13,8 +13,8 @@ export default function Settings() {
                     <label>Profile Picture</label>
                     <div className="settingsPP">
                         <img
-                        src="FIND A PICTURE"
-                        alt="PICTURE OF A DUDE OR LADY"
+                        src="https://media.istockphoto.com/photos/happy-young-guy-showing-thumbs-up-sign-picture-id151546027?s=612x612"
+                        alt="Profile Picture"
                         />
                         <label htmlFor="fileInput">
                         <i className="settingsPPIcon far fa-user-circle"></i>
