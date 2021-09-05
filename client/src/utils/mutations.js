@@ -37,3 +37,11 @@ export const SAVE_USER_POST = gql`
     }
   }
 `;
+export const SAVE_POST_DB = gql`
+  mutation savePostToDB($title : String!, $description : String!) {
+    savePostToDB(title : $title, description : $description) {
+        description
+        title
+    }
+  }
+`;

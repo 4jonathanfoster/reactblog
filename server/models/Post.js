@@ -15,6 +15,10 @@ const postSchema = new Schema({
     type: String,
     required: true,
   },
+  date: {
+    type: Date,
+    default: () => new Date(),
+  },
 });
 
 module.exports = postSchema;

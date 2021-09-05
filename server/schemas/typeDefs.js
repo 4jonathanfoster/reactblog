@@ -16,6 +16,13 @@ gql`
     title: String
   }
 
+  type PostDB {
+    _id: ID!
+    comments: [String]
+    description: String
+    title: String
+  }
+
   input PostInput {
     description: String
     title: String
@@ -28,12 +35,14 @@ gql`
 
   type Query {
       me: User
-  }
+      AllPosts: Post
 
+  }
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     savePost(newPost : PostInput!): User
+    savePostToDB(title : String!, description : String!): PostDB
 
   }
 `;

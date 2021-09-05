@@ -1,5 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User } = require('../models');
+const { PostDB } = require('../models');
 const { signToken } = require('../utils/auth');
 
 
@@ -9,6 +10,17 @@ const resolvers = {
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    AllPosts: async (parent, args, context) => {
+      if (context.user) {
+        temp = [];
+        await PostDB.find({}, (error, data) => {
+          temp.push(data);
+        });
+        console.log( temp );
+        return temp;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -35,15 +47,12 @@ const resolvers = {
     },
     async addUser(parent , { username, email, password }) {
       //Find a user based on the input
-      console.log("resolve addUser");
-
       const user = await User.create({ username, email, password });
       const token = signToken(user);
       return { token, user };
     },
+    // Save Post to User
       async savePost(parent, { newPost }, context) {
-
-      console.log("resolve saveBook");
 
       if (context.user) {
         //Tries to find the user and append the book to the array
@@ -60,6 +69,15 @@ const resolvers = {
       } 
       else {
         throw new AuthenticationError('SaveBook Error');
+      }
+    },
+    // Save Post to DB
+    async savePostToDB(parent, { ...stuff }, context) {
+      if (context.user) {
+        const post = await PostDB.create( stuff );
+      } 
+      else {
+        throw new AuthenticationError('Error');
       }
     },
   }

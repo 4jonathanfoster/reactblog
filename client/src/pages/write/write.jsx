@@ -1,36 +1,40 @@
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
+import { useMutation , useQuery} from '@apollo/client';
 import { SAVE_USER_POST } from '../../utils/mutations';
+import { SAVE_POST_DB} from '../../utils/mutations';
+import { ALL_POSTS} from '../../utils/queries';
+
+
 import Auth from '../../utils/auth';
 import "../../pages/write/write.css"
 
 export default function Write() {
     const [postForm, setpostForm] = useState({ title: '', description: '' });
     const [savePostUser, { error }] = useMutation(SAVE_USER_POST);
+    const [savePostDB, { error_db }] = useMutation(SAVE_POST_DB);
+    const {loading, data } = useQuery(ALL_POSTS);
+
 
     const handleInputChange = (event) => {
-        
         const { name, value } = event.target;
         setpostForm({ ...postForm, [name]: value });
       };
-      console.log(postForm);
-
 
       const handleUserPost = async (event) => {
         event.preventDefault();
-
-        console.log("herrer");
-
         const token = Auth.loggedIn() ? Auth.getToken() : null;
-        console.log(token);
         if (!token) {
           return false;
         }
-        console.log(postForm);
         try {
           const { data } = await savePostUser({
             variables: { newPost:  {...postForm} },
           });
+          const { temp } = await savePostDB({
+            variables: { ...postForm },
+          });
+
+          console.log(loading);
         } catch (err) {
           console.error(err);
         }

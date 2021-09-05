@@ -15,3 +15,12 @@ export const QUERY_ME = gql`
     }
   }
 `;
+export const ALL_POSTS = gql`
+query AllPosts{
+    AllPosts {
+      comments
+      description
+      title
+    }
+  }
+`;
