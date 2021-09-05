@@ -3,8 +3,8 @@ import Topbar from "../src/components/topbar/Topbar";
 import Single from "../src/pages/single/Single";
 import Login from "../src/components/login/Login";
 import Logout from "./components/logout/logout"
-import Write from "../src/pages/write/write"
-import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import Write from "../src/pages/write/Write"
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Settings from "./pages/settings/settings";
 
 
