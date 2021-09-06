@@ -35,7 +35,7 @@ gql`
 
   type Query {
       me: User
-      AllPosts: Post
+      AllPosts: [Post]
 
   }
   type Mutation {

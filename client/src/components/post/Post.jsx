@@ -1,6 +1,6 @@
 import "../post/post.css"
 
-export default function Post() {
+export default function Post({id, comments,}) {
     return (
         <div className="post">
             <img 
