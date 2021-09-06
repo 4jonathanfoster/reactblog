@@ -1,0 +1,103 @@
+.post{
+    width: 385px;
+    margin: 0px 25px 40px 25px;
+}
+.postImg{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+.postInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.postCat{
+    font-family: 'Besley', serif;
+    font-size: 11px;
+    color: cadetblue;
+    line-height: 20px;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.postTitle{
+    font-family: 'Besley', serif;
+    font-size: 24px;
+    margin-top: 15xp;
+    cursor: pointer;
+
+}
+.postDate{
+    font-family: 'Besley', serif;
+    font-style: italic;
+    font-size: 13px;
+    color:cadetblue;
+    margin-top: 15px;
+}
+.postDesc{
+    font-family: 'Besley', serif;
+    font-size: 14px;
+    color: cadetblue;
+    line-height: 24px;
+    margin-top: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.loginStyle{
+    height: 900px;
+    background: url("../../images/logoutimage_800x600.jpg");
+    display: flex;
+    flex-direction: column;
+background-size:cover;
+align-items: center;
+}
+
+#flexmain{
+    box-shadow: 10px 12px 75px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 12px 75px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 12px 75px 0px rgba(0,0,0,0.75);
+        border-radius: 10px;
+        border: 2px solid #a3c1dd;
+    background: rgba(236,235,236,1);
+    min-height: 300px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.signTitle {
+    text-shadow: 0px 4px 10px rgba(0,0,0,0.6);
+    color: #000000;
+    margin-top:3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: Lora;
+    font-size: 45px;
+}
+
+.col-auto {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-bottom: 1rem;
+}
+#login-btn {
+    margin-top: 7px;
+    width: 80px;
+    height: 30px;
+    background-color:#e3cad5 ;
+    border-radius: 20px;
+    font-family: "Besley";
+    text-shadow: 0px 0px 11px rgba(0,0,0,0.5);
+}
+.flex-container {
+    margin-top: 250px;
+    display:flex;
+    flex-direction: column;
+}
