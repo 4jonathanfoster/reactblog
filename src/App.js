@@ -1,14 +1,21 @@
 import Home from "../src/pages/home/Home";
 import Topbar from "../src/components/topbar/Topbar";
-// import Single from "../src/pages/single/Single";
-import Write from "./pages/write/write";
-import Settings from "./pages/settings/settings"
+
+
+import Single from "../src/pages/single/Single";
+import Logout from "./components/logout/Logout.jsx"
+import Write from "../src/pages/write/Write"
+
 
 function App() {
   return (
     <>
-      <Topbar />
-      <Settings />
+
+    <Topbar />
+    {/* <Write />
+    <Single/> */}
+    <Logout/>
+
     </>
     
   );

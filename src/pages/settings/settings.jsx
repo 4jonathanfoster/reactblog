@@ -1,7 +1,7 @@
 import "./settings.css"
 import Sidebar from "../../components/sidebar/Sidebar"  
 
-export default function Settings() {
+export default function settings() {
     return (
         <div className="settings">
             <div className="settingsWrapper">
