@@ -36,7 +36,10 @@ export default function Login() {
       };
     
     return (
+<<<<<<< HEAD
       <div className="loginStyle">
+=======
+>>>>>>> 4b4a87612b57e18677e2059564beb3acc7b639df
     <div className="flex-container" id="flexmain">
         <form className="flex-child login-form" onSubmit={handleFormSubmit}>
             <h1 className="signTitle">Login</h1>
@@ -50,10 +53,17 @@ export default function Login() {
                 <button type="submit" className="btn btn-primary" id="login-btn">Login</button>
             </div>
             <div className="col-auto">
+<<<<<<< HEAD
                 <p>New here?<span><Link className="hyperlink" to="/signup"> Sign-Up Here!</Link></span></p>
             </div>
         </form>
     </div>
     </div>
+=======
+                <p>New here?<span><a className="hyperlink" href="signup"> Sign-Up Here!</a></span></p>
+            </div>
+        </form>
+    </div>
+>>>>>>> 4b4a87612b57e18677e2059564beb3acc7b639df
     )
 }
