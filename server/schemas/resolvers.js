@@ -14,15 +14,12 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     AllPosts: async (parent, args, context) => {
-      if (context.user) {
-        temp = [];
-        await PostDB.find({}, (error, data) => {
-          temp.push(data);
-        });
-        console.log( temp );
-        return temp;
-      }
-      throw new AuthenticationError('You need to be logged in!');
+      temp = [];
+        const x = await PostDB.find({});
+        console.log(x);
+
+        return x;
+
     },
   },
 

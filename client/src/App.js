@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from "../src/pages/home/Home";
 import Topbar from "../src/components/topbar/Topbar";
-import Single from "../src/pages/single/Single";
 import Login from "../src/components/login/login";
 import Logout from "./components/logout/logout"
 import Write from "../src/pages/write/write"
@@ -66,9 +65,6 @@ function App() {
             </Route>
             <Route path="/write">
             <Write/>
-            </Route>
-            <Route path="/single">
-            <Single/>
             </Route>
             <Route path="/signup">
             <Signup />

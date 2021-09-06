@@ -12,7 +12,8 @@ export default function Write() {
     const [postForm, setpostForm] = useState({ title: '', description: '' });
     const [savePostUser, { error }] = useMutation(SAVE_USER_POST);
     const [savePostDB, { error_db }] = useMutation(SAVE_POST_DB);
-    const {loading, data } = useQuery(ALL_POSTS);
+    const {data, loading } = useQuery(ALL_POSTS);
+    console.log(data);
 
 
     const handleInputChange = (event) => {
