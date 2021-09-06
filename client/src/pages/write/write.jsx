@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { useMutation , useQuery} from '@apollo/client';
 import { SAVE_USER_POST } from '../../utils/mutations';
 import { SAVE_POST_DB} from '../../utils/mutations';
@@ -12,7 +12,16 @@ export default function Write() {
     const [postForm, setpostForm] = useState({ title: '', description: '' });
     const [savePostUser, { error }] = useMutation(SAVE_USER_POST);
     const [savePostDB, { error_db }] = useMutation(SAVE_POST_DB);
-    const {loading, data } = useQuery(ALL_POSTS);
+    const {data, error_post, dataPost } = useQuery(ALL_POSTS);
+
+    useEffect((x)=>{
+        fetch("/allposts").then((data)=>{
+            console.log(data.data)
+        })
+    },[])
+    console.log({data});
+
+
 
 
     const handleInputChange = (event) => {
@@ -34,7 +43,9 @@ export default function Write() {
             variables: { ...postForm },
           });
 
-          console.log(loading);
+          //const { temp_DB } = await loading;
+
+
         } catch (err) {
           console.error(err);
         }

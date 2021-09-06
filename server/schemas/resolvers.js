@@ -1,6 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
-const { PostDB } = require('../models');
+const { User, PostDB } = require('../models');
 const { signToken } = require('../utils/auth');
 
 
@@ -14,15 +13,13 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     AllPosts: async (parent, args, context) => {
-      if (context.user) {
         temp = [];
-        await PostDB.find({}, (error, data) => {
-          temp.push(data);
-        });
-        console.log( temp );
-        return temp;
-      }
-      throw new AuthenticationError('You need to be logged in!');
+        const x = await PostDB.find({});
+        console.log(x);
+
+        return x;
+
+      
     },
   },
 
@@ -75,6 +72,7 @@ const resolvers = {
     async savePostToDB(parent, { ...stuff }, context) {
       if (context.user) {
         const post = await PostDB.create( stuff );
+        return post;
       } 
       else {
         throw new AuthenticationError('Error');

@@ -35,8 +35,7 @@ gql`
 
   type Query {
       me: User
-      AllPosts: Post
-
+      AllPosts: [PostDB]
   }
   type Mutation {
     login(email: String!, password: String!): Auth
