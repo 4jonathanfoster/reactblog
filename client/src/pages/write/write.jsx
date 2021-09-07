@@ -47,7 +47,7 @@ history.push("/")
     return (
         <div className="write">
             <img className="writeImg"
-            src="https://wallpapercave.com/wp/wp4020516.png" alt="no image" />
+            src="https://cdn.pixabay.com/photo/2018/05/17/08/34/matrix-3408060_960_720.jpg" alt="no image" />
             <form className="writeForm" onSubmit={handleUserPost}>
                 <div className="writeFormGroup">
                     <label htmlFor="fileInput"></label>
