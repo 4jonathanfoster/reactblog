@@ -7,26 +7,29 @@ export default function Posts() {
 // const [allPost,setAllPost] = useState([])
 // if (!allPost){
     const {data, loading } = useQuery(ALL_POSTS);
-    if (data){console.log(data)};
+    if (data){console.log(data)
+    
+        console.log(data.AllPosts)
+    };
 // }
     return (
         <div className="posts">
-            {/* {
-                data?data.map(data=>{
+            {
+                data!== undefined?data.AllPosts.map(data=>{
                     return(
                         <div>
                             <h3>{data.title}</h3>
-                            <p>data.description</p>
+                            <p>{data.description}</p>
                         </div>
                     )
                 }):null
-            } */}
+            }
+           {/* <Post/>
            <Post/>
            <Post/>
            <Post/>
            <Post/>
-           <Post/>
-           <Post/>
+           <Post/> */}
         </div>
     )
 }
