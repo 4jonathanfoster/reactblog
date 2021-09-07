@@ -16,7 +16,7 @@ background-size:cover;
     border-radius: 10px;
     border: 3px solid #a3c1dd;
 background: rgba(236,235,236,1);
-height: 280px;
+min-height: 280px;
 width: 650px;
 display: flex;
 flex-direction: column;
@@ -25,6 +25,7 @@ text-align: center;
 }
 
 .logoutTitle{
+    margin-top: 30px;
     font-size: 300%;
     justify-content: center;
     text-align: center;
@@ -35,7 +36,7 @@ text-align: center;
 .logMessage{
     font-size:larger;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 35px;
     font-family: "Besley";
     text-shadow: 0px 0px 11px rgba(0,0,0,0.5);
 }
