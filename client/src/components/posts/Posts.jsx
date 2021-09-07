@@ -18,6 +18,7 @@ export default function Posts() {
                 data!== undefined?data.AllPosts.map(data=>{
                     return(
                         <div>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYFCvBzAMlw8kr5_JWq5TkHp6zgQMh2w-mEA&usqp=CAU" alt="no image"/>
                             <h3>{data.title}</h3>
                             <p>{data.description}</p>
                         </div>

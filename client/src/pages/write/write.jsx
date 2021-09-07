@@ -3,7 +3,7 @@ import { useMutation , useQuery} from '@apollo/client';
 import { SAVE_USER_POST } from '../../utils/mutations';
 import { SAVE_POST_DB} from '../../utils/mutations';
 import { ALL_POSTS} from '../../utils/queries';
-
+import { useHistory } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
 import "../../pages/write/write.css"
@@ -14,7 +14,7 @@ export default function Write() {
     const [savePostDB, { error_db }] = useMutation(SAVE_POST_DB);
     const {data, loading } = useQuery(ALL_POSTS);
     console.log(data);
-
+let history=useHistory();
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -34,7 +34,10 @@ export default function Write() {
           const { temp } = await savePostDB({
             variables: { ...postForm },
           });
+if(data){
+history.push("/")
 
+}
           console.log(data);
         } catch (err) {
           console.error(err);
