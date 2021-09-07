@@ -15,7 +15,7 @@ align-items: center;
         border-radius: 10px;
         border: 2px solid #a3c1dd;
     background: rgba(236,235,236,1);
-    height: 300px;
+    min-height: 300px;
     width: 450px;
     display: flex;
     flex-direction: column;
@@ -47,6 +47,7 @@ align-items: center;
     text-shadow: 0px 0px 11px rgba(0,0,0,0.5);
 }
 .flex-container {
+    min-height: 300px;
     margin-top: 250px;
     display:flex;
     flex-direction: column;

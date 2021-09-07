@@ -11,7 +11,7 @@ export default function Posts() {
 // }
     return (
         <div className="posts">
-            {
+            {/* {
                 data?data.map(data=>{
                     return(
                         <div>
@@ -20,13 +20,13 @@ export default function Posts() {
                         </div>
                     )
                 }):null
-            }
-           {/* <Post/>
+            } */}
            <Post/>
            <Post/>
            <Post/>
            <Post/>
-           <Post/> */}
+           <Post/>
+           <Post/>
         </div>
     )
 }
